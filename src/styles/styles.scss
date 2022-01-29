@@ -1,0 +1,259 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import ".././../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css";
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css";
+@import './variables';
+
+$sizes: (
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px
+);
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  background-color: rgb(150, 150, 150);
+
+  &:hover {
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(70, 70, 70);
+  }
+}
+/* Scroll Bar */
+
+.d-flex {
+  display: flex !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.no- {
+  &border {
+    border: 0;
+  }
+
+  &border-bottom {
+    border-bottom: 0;
+  }
+
+  &border-top {
+    border-top: 0;
+  }
+
+  &border-left {
+    border-left: 0;
+  }
+
+  &border-right {
+    border-right: 0;
+  }
+}
+
+.border {
+  border: 1px solid rgb(216, 221, 230) !important;
+
+  @each $size in $sizes {
+    &-#{nth($size, 1)} {
+      border-width: nth($size, 2);
+    }
+  }
+
+  &-color {
+    @each $color in $solidColors {
+      &-#{nth($color, 1)} {
+        border: 1px solid nth($color, 2);
+      }
+    }
+
+    @each $color in $transparentColors {
+      &-transparent-#{nth($color, 1)} {
+        border: 1px solid nth($color, 2);
+      }
+    }
+  }
+
+  &-top {
+    border-top: 1px solid rgb(216, 221, 230) !important;
+
+    @each $size in $sizes {
+      &-#{nth($size, 1)} {
+        border-top-width: nth($size, 2);
+      }
+    }
+  }
+
+  &-bottom {
+    border-bottom: 1px solid rgb(216, 221, 230) !important;
+
+    @each $size in $sizes {
+      &-#{nth($size, 1)} {
+        border-bottom-width: nth($size, 2);
+      }
+    }
+  }
+
+  &-left {
+    border-left: 1px solid rgb(216, 221, 230) !important;
+
+    @each $size in $sizes {
+      &-#{nth($size, 1)} {
+        border-left-width: nth($size, 2);
+      }
+    }
+  }
+
+  &-right {
+    border-right: 1px solid rgb(216, 221, 230) !important;
+
+    @each $size in $sizes {
+      &-#{nth($size, 1)} {
+        border-right-width: nth($size, 2);
+      }
+    }
+  }
+}
+
+.text {
+  &-color {
+    @each $color in $solidColors {
+      &-#{nth($color, 1)} {
+        color: nth($color, 2);
+      }
+    }
+
+    @each $color in $transparentColors {
+      &-transparent-#{nth($color, 1)} {
+        color: nth($color, 2);
+      }
+    }
+  }
+
+  &-medium {
+    font-size: 24px !important;
+  }
+
+  &-lg-small {
+    font-size: 18px !important;
+  }
+
+  &-m-small {
+    font-size: 14px !important;
+  }
+
+  &-x-small {
+    font-size: 12px !important;
+  }
+}
+
+.shadow {
+  &-sm {
+    box-shadow: 0 0rem 0.25rem rgba(0, 0, 0, .075) !important;
+  }
+
+  &-white-lg {
+    box-shadow: 0 0 100rem 5rem rgba(255, 255, 255) !important;
+  }
+}
+
+.nav {
+
+  &-link {
+    color: rgb(115,115,115);
+  }
+
+  &-hover:hover {
+    background-color: rgba(52, 142, 216, 0.3);
+    color: black;
+  }
+
+  &-active {
+    background-color: rgba(52, 142, 216, 0.3);
+    color: black;
+  }
+}
+
+.bg {
+  &-color {
+    @each $color in $solidColors {
+      &-#{nth($color, 1)} {
+        background: nth($color, 2);
+      }
+    }
+
+    @each $color in $transparentColors {
+      &-transparent-#{nth($color, 1)} {
+        background: nth($color, 2);
+      }
+    }
+  }
+}
+
+.font-weight {
+
+  &-bold {
+    font-weight: 600 !important;
+  }
+
+  &-normal {
+    font-weight: 400 !important;
+  }
+}
+
+.badge {
+  &-primary {
+    color: #fff;
+    background: #2986ce;
+  }
+
+  &-secondary {
+    color: #fff;
+    background: #6c757d;
+  }
+
+  &-success {
+    color: #fff;
+    background: #28a745;
+  }
+
+  &-info {
+    color: #fff;
+    background: #17a2b8;
+  }
+
+  &-warning {
+    color: #000;
+    background: #ffc107;
+  }
+
+  &-danger {
+    color: #fff;
+    background: #dc3545;
+  }
+
+  &-dark {
+    color: #000;
+    background: #fff;
+  }
+}
+
+.mtn-4 {
+  margin-top: -1.5rem;
+}

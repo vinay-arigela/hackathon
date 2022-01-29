@@ -1,0 +1,35 @@
+<div class="m-2 flex">
+  <button type="button" (click)="openMarket()" class="btn btn-danger m-3 flex-row">Open Market</button>
+  <button type="button" (click)="closeMarket()" class="btn btn-danger m-3 lex-row">Close Market</button>
+</div>
+
+<div class="m-4 flex">
+  <div class="col-1 flex-row">
+    <label class="text-color-red"> Select Stock</label>
+    <select placeholder="Select Stock"
+            class="form-select w-3">
+      <option *ngFor="let stock of stocks" [ngValue]="stock.id">{{stock.name}}</option>
+    </select>
+  </div>
+    <div class="flex-row">
+      <button type="button" class="btn btn-danger m-3 flex-row">From Date</button>
+      <button type="button" class="btn btn-danger m-3 flex-row">To Date</button>
+      <button type="button" class="btn btn-danger m-3 flex-row">Show Orders</button>
+    </div>
+    <ag-grid-angular style="width: 1500px; height: 230px;"
+                     class="ag-theme-alpine"
+                     [rowData]="rowData"
+                     [columnDefs]="columnDefs">
+    </ag-grid-angular>
+
+    
+  </div>
+  <div class="m-4">
+      <span class="bg-color-red text-color-white m-3 p-3">Execution Qty</span>
+    <input type="text" placeholder="Enter">
+  </div>
+  <div class="m-4">
+    <span class="bg-color-red text-color-white m-3 p-3">Execution Price</span>
+    <input type="text" placeholder="Enter">
+  </div>
+  <button type="button" (click)="executeOrders()" class="btn btn-primary m-4 lex-row">Execute Orders</button>

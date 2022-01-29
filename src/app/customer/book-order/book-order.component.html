@@ -1,0 +1,30 @@
+<h1>
+  Book Order
+</h1>
+<div>
+  <form>
+    <label for="fname">Search Stock</label>
+
+    <select formControlName="stock-type" class="form-control">
+      <option disabled>Search Stock</option>
+      <option>DBS</option>
+      <option>SBI</option>
+    </select><br><br>
+
+    <label for="fname">Order Type</label>
+
+    <select formControlName="order-type" class="form-control">
+      <option disabled>Order Type</option>
+      <option>Limit</option>
+      <option>Market</option>
+    </select><br><br>
+
+    <label for="fname">Price</label>
+    <input type="text" placeholder="Price"><br><br>
+
+    <label for="fname">Quantity</label>
+    <input type="text" placeholder="Quantity"><br><br>
+
+    <input type="submit" value="Place Order">
+  </form>
+</div>

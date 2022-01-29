@@ -1,0 +1,38 @@
+$action-primary-color: #2986ce;
+$white-color: #fff;
+$orange-color: #ff6000;
+$transparent-color: rgba(0,0,0,0);
+
+$solidColors: (
+    "black": rgba(51,51,51,1),
+    "white": rgba(255,255,255,1),
+    "maroon": rgba(111,23,43,1),
+    "aegean": rgba(70,143,162,1),
+    "red": rgba(197,60,73,1),
+    "purple": rgba(155,81,224,1),
+    "orange": rgba(255, 123, 7, 1),
+    "blueVoilet": rgba(111,114,181,1),
+    "yellow": rgba(242,201,76,1),
+    "darkSoftBlue": rgba(111,138,181,1),
+    "brown": rgba(181,114,111,1),
+    "blue": rgba(47,128,237,1),
+    "grey": rgba(130,130,130,1),
+    "green": rgba(33,150,83,1),
+);
+
+$transparentColors: (
+    "black": rgba(51,51,51,0.2),
+    "white": rgba(255,255,255,0.2),
+    "maroon": rgba(111,23,43,0.2),
+    "aegean": rgba(70,143,162,0.2),
+    "red": rgba(197,60,73,0.2),
+    "purple": rgba(155,81,224,0.2),
+    "orange": rgba(255, 123, 7, 0.2),
+    "blueVoilet": rgba(111,114,181,0.2),
+    "yellow": rgba(242,201,76,0.2),
+    "darkSoftBlue": rgba(111,138,181,0.2),
+    "brown": rgba(181,114,111,0.2),
+    "blue": rgba(47,128,237,0.2),
+    "grey": rgba(130,130,130,0.2),
+    "green": rgba(33,150,83,0.2),
+);
